@@ -1,0 +1,354 @@
+body{
+	background:url(universe.jpg) no-repeat 0 0;
+	background-size:cover;
+}
+
+footer {
+	width: auto;
+	margin-top: 2%;	
+	margin-left: 10%;
+}
+
+footer li{
+	display: inline;	
+}
+
+button{
+	font-size: 1.8vw;
+	font-family: "黑体";
+	color: skyblue;
+	background-color:rgba(0,0,0,0.1);
+	border: 0px;
+}
+
+button:hover{
+	transition: 1s;
+	color: white;
+}
+
+.sun{
+	background:url(sun.jpg) repeat-x 0 0;
+	background-size: 200%;
+	background-position:-20px 0;
+  	height:20vw;
+	width:20vw;
+	z-index:100;
+	border:0.5px;
+	border-radius: 100%;
+	box-shadow: 0px 0px 10px 5px #000;
+	/* to create the illution of rotation, we must have a rectangular image 
+	and fix background position  and move the background postition using animation
+	*/
+	animation: 
+    	rotate_sun 50s linear infinite;
+	animation-direction:normal;
+ }
+.sun:hover{
+	animation: none;
+}
+
+/*水星*/
+.water{
+	background:url(water.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:2.5vw;
+	width:2.5vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:150;
+			
+	animation: 
+    	nudge 20s linear infinite ,
+		revolve_water 8s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_water{
+  0%, 100% {
+    transform: translate(10vw, -2vw);}
+ 
+  25% {
+    transform: translate(15vw,-2vw);
+	z-index:0;}
+  50% {
+    transform: translate(-10vw, 2vw);}
+  
+  75% {
+    transform: translate(-15vw, 2vw);}
+}
+.water:hover{
+	animation: none;
+}
+
+
+/*金星*/
+.gold{
+	background:url(gold.jpg) repeat-x 0 0;
+	background-size:100%;
+	height:5vw;
+	width:5vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:160;
+			
+	animation: 
+    	nudge 20s linear infinite , 
+		revolve_gold 8s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_gold{
+  0%, 100% {
+    transform: translate(0px, 0px);}
+ 
+  25% {
+    transform: translate(18vw,-4vw);
+	z-index:0;}
+  50% {
+    transform: translate(0px, 0px);}
+  
+  75% {
+    transform: translate(-18vw, 4vw);}
+}
+.gold:hover{
+	animation: none;
+}
+
+
+/*地球*/
+.earth{
+	background:url(earth.jpg) repeat-x 0 0;
+	background-size:300%;
+	height:5vw;
+	width:5vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:180;
+			
+	animation: 
+    	nudge 25s linear infinite ,
+		revolve_earth 10s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_earth{
+  0%, 100% {
+    transform: translate(0px, 0px);}
+ 
+  25% {
+    transform: translate(22vw,-6vw);
+	z-index:0;}
+  50% {
+    transform: translate(0px, 0px);}
+  
+  75% {
+    transform: translate(-22vw, 6vw);}
+}
+.earth:hover{
+	animation: none;
+}
+
+
+/*火星*/
+.mars{
+	background:url(fire.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:3.5vw;
+	width:3.5vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:230;
+			
+	animation: 
+    	nudge 25s linear infinite ,
+		revolve_fire 12s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_fire{
+  0%, 100% {
+    transform: translate(0px, 0px);}
+ 
+  25% {
+    transform: translate(26vw,-8vw);
+	z-index:0;}
+  50% {
+    transform: translate(0px, 0px);}
+  
+  75% {
+    transform: translate(-26vw, 8vw);}
+}
+.mars:hover{
+	animation: none;
+}
+
+
+/*木星*/
+.wood{
+	background:url(wood.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:12vw;
+	width:12vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	/* margin:-5px 0 0 -5px; */
+	z-index:250;
+			
+	animation: 
+    	nudge 8s linear infinite ,
+		revolve_wood 10s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_wood{
+  0%, 100% {
+    transform: translate(0px, 0px);}
+ 
+  25% {
+    transform: translate(30vw,-10vw);
+	z-index:0;}
+  50% {
+    transform: translate(0px, 0px);}
+  
+  75% {
+    transform: translate(-30vw, 10vw);}
+}
+.wood:hover{
+	animation: none;
+}
+
+
+
+/*土星*/
+.mud{
+	background:url(solid.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:10vw;
+	width:10vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:280;
+			
+	animation: 
+    	nudge 7s linear infinite ,
+		revolve_mud 20s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_mud{
+  0%, 100% {
+    transform: translate(150px, 0px);}
+ 
+  25% {
+    transform: translate(34vw,-12vw);
+	z-index:0;}
+  50% {
+    transform: translate(-150px, 0px);}
+  
+  75% {
+    transform: translate(-34vw, 12vw);}
+}
+.mud:hover{
+	animation: none;
+}
+
+
+
+/*天王星*/
+.skyking{
+	background:url(sky.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:8vw;
+	width:8vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:300;
+			
+	animation: 
+    	nudge 7s linear infinite ,
+		revolve_skyking 30s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_skyking{
+  0%, 100% {
+    transform: translate(200px, 0px);}
+ 
+  25% {
+    transform: translate(38vw,-14vw);
+	z-index:0;}
+  50% {
+    transform: translate(-200px, 0px);}
+  
+  75% {
+    transform: translate(-38vw, 14vw);}
+}
+.skyking:hover{
+	animation: none;
+}
+
+
+/*海王星*/
+.seaking{
+	background:url(sea.jpg) repeat-x 0 0;
+	background-size:200%;
+	height:7vw;
+	width:7vw;
+	border-radius: 100%;
+	box-shadow: 0px 0px 5px 2px #000;
+	position:absolute;
+	z-index:330;
+			
+	animation: 
+    	nudge 6s linear infinite ,
+		revolve_seaking 60s linear infinite ;
+	    animation-direction:normal;
+}
+@keyframes revolve_seaking{
+  0%, 100% {
+    transform: translate(200px, 0px);}
+ 
+  25% {
+    transform: translate(42vw,-16vw);
+	z-index:0;}
+  50% {
+    transform: translate(-200px, 0px);}
+  
+  75% {
+    transform: translate(-42vw, 16vw);}
+}
+.seaking:hover{
+	animation: none;
+}
+
+
+@keyframes nudge {
+	0%{background-position: 0 0;}
+	100%{background-position: -1639px 0;}
+}
+@keyframes rotate_sun {
+	0%{background-position: 0 0;}
+	100%{background-position: -1000px 0;}
+}
+
+html, body {
+  height: 100%;
+}
+
+.wholepart {
+	/*The flex CSS property is a shorthand property specifying 
+	the ability of a flex item to alter its dimensions to fill available space. 
+	Flex items can be stretched to use available space proportional to their flex grow factor 
+	or their flex shrink factor to prevent overflow.*/
+  display: flex;
+  /*place all the solarsystem items in center */
+  align-items: center;
+  justify-content: center;
+}
+
+#copyright{
+	color: pink;
+	font-size: large;
+	font-family: "黑体";
+	margin-left: 28%;
+}
